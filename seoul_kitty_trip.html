@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty 2025 首爾完美之旅</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Pacifico&display=swap');
+
+        :root {
+            --kitty-pink: #FFB7C5;      /* 淺粉 */
+            --kitty-hot-pink: #FF69B4;  /* 亮粉 */
+            --kitty-red: #FF0033;       /* 蝴蝶結紅 */
+            --kitty-white: #FFF0F5;     /* 背景白 */
+            --text-color: #555;
+            --line-5: #8B50A4;          /* 5號線紫 */
+            --line-4: #00A9E0;          /* 4號線藍 */
+            --line-2: #3CB44B;          /* 2號線綠 */
+            --line-1: #0052A4;          /* 1號線深藍 */
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--kitty-white);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--kitty-pink);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-bottom: 6px solid var(--kitty-hot-pink);
+            border-radius: 0 0 30px 30px;
+            position: relative;
+        }
+        
+        header::after {
+            content: "🎀";
+            font-size: 3rem;
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 0px var(--kitty-hot-pink);
+        }
+
+        h2 {
+            color: var(--kitty-hot-pink);
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px dashed var(--kitty-pink);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .section-title-container {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.15);
+            border: 2px solid var(--kitty-pink);
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--kitty-hot-pink);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .weather-box {
+            background: linear-gradient(135deg, #E0F7FA, #FFFFFF);
+            border: 2px solid #4DD0E1;
+            color: #006064;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .weather-box::after {
+            content: "❄️";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        ul li::before {
+            content: "💕";
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+        
+        .checklist li {
+            font-size: 1.1rem;
+            border-bottom: 1px dotted #ddd;
+            padding: 8px 0;
+        }
+        .checklist li::before {
+            content: "✅";
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--kitty-hot-pink);
+            background-color: #FFF0F5;
+            padding: 0 5px;
+            border-radius: 3px;
+        }
+
+        /* Subway Colors */
+        .subway-circle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .line-5 { background-color: var(--line-5); }
+        .line-4 { background-color: var(--line-4); }
+        .line-2 { background-color: var(--line-2); }
+        .line-1 { background-color: var(--line-1); }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ffe6f2;
+        }
+        th {
+            background-color: var(--kitty-pink);
+            color: white;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--kitty-pink);
+            color: white;
+            font-weight: bold;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .nav-btn {
+            display: block;
+            background: white;
+            color: var(--kitty-hot-pink);
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hello Seoul! 2025</h1>
+    <p>🐱 Kitty 的東大門 DDP 粉紅攻略</p>
+    <p style="font-size: 0.9rem; opacity: 0.9;">12/8 (一) - 12/10 (三)</p>
+</header>
+
+<div class="container">
+
+    <div class="weather-box">
+        <h3 style="margin-top:0;">🧣 穿搭注意報 (-4°C)</h3>
+        <p><strong>必備：</strong> 羽絨外套、圍巾、毛帽、手套、暖暖包。</p>
+        <p>⚠️ <strong>Day 2 醫美後：</strong> 請穿寬鬆高領，並準備冰敷袋消腫。</p>
+        <p>👟 <strong>鞋子：</strong> 務必穿防水防滑鞋（怕雪地滑）！</p>
+    </div>
+
+    <div class="section-title-container"><h2>🗓️ 每日行程</h2></div>
+
+    <div class="card">
+        <span class="tag">Day 1 - 12/08 (一)</span>
+        <h3 style="color:var(--kitty-hot-pink); margin:10px 0;">金浦抵達 → 東大門主場</h3>
+        <ul>
+            <li><strong>17:00</strong> <span class="subway-circle line-5">5</span>金浦機場抵達 → 東大門歷史文化公園站 (1-5號出口)。</li>
+            <li><strong>19:00</strong> <span class="highlight">東大門血拚 (Hello apM, Doota)</span> & DDP 整點光雕秀。</li>
+            <li><strong>晚餐</strong> 陳玉華一隻雞 (推薦：整隻雞+年糕)。</li>
+            <li><strong>宵夜</strong> DDP 旁 뚜띠아모 爆漿甜甜圈。</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <span class="tag">Day 2 - 12/09 (二)</span>
+        <h3 style="color:var(--kitty-hot-pink); margin:10px 0;">明洞醫美 ＋ 弘大烤肉</h3>
+        <ul>
+            <li><strong>08:30</strong> 早餐：London Bagel Museum (貝果+巨型可頌)。</li>
+            <li><strong>09:40</strong> <span class="subway-circle line-4">4</span>前往明洞站 (12分鐘)。</li>
+            <li><strong>11:00</strong> <strong>明洞醫美時間</strong> ✨ (記得冰敷)。</li>
+            <li><strong>14:10</strong> 午餐：米田里部隊鍋 OR 木浦家豆腐鍋。</li>
+            <li><strong>15:30</strong> 下午茶：Café aA 維也納咖啡。</li>
+            <li><strong>16:40</strong> <span class="subway-circle line-2">2</span>前往弘大入口站。</li>
+            <li><strong>17:30</strong> <span class="highlight">晚餐：Git Teul 弘大本店</span> (必點：老肉五花、羽毛蛋捲)。</li>
+            <li><strong>20:00</strong> 弘大塗鴉街、街頭表演。</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <span class="tag">Day 3 - 12/10 (三)</span>
+        <h3 style="color:var(--kitty-hot-pink); margin:10px 0;">廣藏 ＋ 聖水 ＋ 回家</h3>
+        <ul>
+            <li><strong>08:30</strong> <span class="subway-circle line-1">1</span>前往鐘閣站。</li>
+            <li><strong>08:45</strong> 廣藏市場：大蒜奶油麵包 + 綠豆煎餅。</li>
+            <li><strong>10:15</strong> <span class="subway-circle line-1">1</span>前往安國站 (北村韓屋)。</li>
+            <li><strong>11:30</strong> 午餐：無垢屋人蔘雞 (安國總店)。</li>
+            <li><strong>13:20</strong> <span class="subway-circle line-4">4</span>前往會賢站 (南大門市場買飾品/藥妝)。</li>
+            <li><strong>14:10</strong> <span class="subway-circle line-2">2</span>前往聖水站。</li>
+            <li><strong>14:30</strong> <span class="highlight">聖水洞紅磚倉庫區 (Onion 巨型可頌)</span>。</li>
+            <li><strong>16:40</strong> 前往機場 (AREX 機場鐵道)。</li>
+            <li><strong>23:00</strong> ✈️ 2025 滿載而歸！</li>
+        </ul>
+    </div>
+
+    <div class="section-title-container"><h2>🚇 Kitty 地鐵指南</h2></div>
+    
+    <div class="card">
+        <p>跟著顏色走就不會迷路囉！</p>
+        <p><span class="subway-circle line-5">5</span> <strong>紫色線：</strong> 金浦機場 ⇄ 飯店</p>
+        <p><span class="subway-circle line-4">4</span> <strong>藍色線：</strong> 東大門 ⇄ 明洞 / 南大門</p>
+        <p><span class="subway-circle line-2">2</span> <strong>綠色線：</strong> 東大門 ⇄ 弘大 / 聖水</p>
+        <p><span class="subway-circle line-1">1</span> <strong>深藍線：</strong> 東大門 ⇄ 廣藏市場 / 安國</p>
+    </div>
+
+    <div class="section-title-container"><h2>🗣️ 手指韓語小教室</h2></div>
+
+    <div class="card">
+        <table>
+            <tr>
+                <th>中文</th>
+                <th>韓文 (發音)</th>
+            </tr>
+            <tr>
+                <td>多少錢？</td>
+                <td>얼마예요? (歐碼耶優)</td>
+            </tr>
+            <tr>
+                <td>算便宜一點</td>
+                <td>깎아주세요 (嘎嘎朱塞優)</td>
+            </tr>
+            <tr>
+                <td>可以退稅嗎?</td>
+                <td>Tax Free 돼요? (Tax Free 堆優)</td>
+            </tr>
+            <tr>
+                <td>請給我這個</td>
+                <td>이거 주세요 (依勾 朱塞優)</td>
+            </tr>
+            <tr>
+                <td>洗手間在哪?</td>
+                <td>화장실 어디예요? (化妝室 歐底耶優)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section-title-container"><h2>🍽️ 必吃清單 (Checklist)</h2></div>
+
+    <div class="card">
+        <ul class="checklist">
+            <li>陳玉華一隻雞</li>
+            <li>廣藏大蒜麵包＋貝果</li>
+            <li>London Bagel 貝果</li>
+            <li>部隊鍋／豆腐鍋</li>
+            <li>Café aA 維也納咖啡</li>
+            <li>無垢屋人蔘雞</li>
+            <li>聖水 Onion 可頌</li>
+            <li>弘大最強烤肉 (Git Teul)</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>Have a Safe & Cute Trip! ✈️🎀</p>
+    <p style="font-size:0.8rem">Designed by Gemini for You</p>
+</footer>
+
+</body>
+</html>
